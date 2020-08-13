@@ -43,21 +43,23 @@
 	<div class="cahnrswsuwp-c-dir__profile-consultant__service__wrapper">
 		<h2 class="cahnrswsuwp-c-dir__profile-consultant__section-title">Services</h2>
 		<ul class="cahnrswsuwp-c-dir__profile-consultant__service__details">
-			<?php foreach ( $services as $service ) : ?>
-			<li class="cahnrswsuwp-c-dir__profile-consultant__service">
-				<?php echo esc_html( $service ); ?>
-			</li>
-			<?php endforeach; ?>
+			<?php foreach ( $services as $service ) : if ( strlen( $service ) > 0 ) : ?>
+				<li class="cahnrswsuwp-c-dir__profile-consultant__service">
+					<?php echo esc_html( $service ); ?>
+				</li>
+				<?php endif;
+			endforeach; ?>
 		</ul>
 	</div>
 	<div class="cahnrswsuwp-c-dir__profile-consultant__county__wrapper">
 		<h2 class="cahnrswsuwp-c-dir__profile-consultant__section-title">Counties Served</h2>
 		<ul class="cahnrswsuwp-c-dir__profile-consultant__county__details">
-			<?php foreach ( $counties as $county ) : ?>
-			<li class="cahnrswsuwp-c-dir__profile-consultant__county">
-				<?php echo esc_html( $county ); ?>
-			</li>
-			<?php endforeach; ?>
+				<?php foreach ( $counties as $county ) : if ( strlen( $county ) > 0 ) : ?>
+				<li class="cahnrswsuwp-c-dir__profile-consultant__county">
+						<?php echo esc_html( $county ); ?>
+				</li>
+				<?php endif;
+			endforeach; ?>
 		</ul>
 	</div>
 	<div class="cahnrswsuwp-c-dir__profile-consultant__optional__wrapper">
