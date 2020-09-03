@@ -62,7 +62,7 @@ class Directory_Sawmill extends Directory_Base {
 			Plugin::require_class( 'county' );
 
 			$counties = County::get_terms();
-			$county_selected  = ( ! empty( $_REQUEST['fs_county'] ) ) ? sanitize_text_field( $_REQUEST['fs_county'] ) : '';
+			$county_selected  = ( ! empty( $_REQUEST['county'] ) ) ? sanitize_text_field( $_REQUEST['county'] ) : '';
 
 			include Plugin::get_template_dir() . '/sawmill-shortcode-filters.php';
 
@@ -124,9 +124,7 @@ class Directory_Sawmill extends Directory_Base {
 
 	protected static function get_query_args() {
 
-		$county_selected  = ( ! empty( $_REQUEST['fs_county'] ) ) ? sanitize_text_field( $_REQUEST['fs_county'] ) : '';
-
-		$dir_search  = ( ! empty( $_REQUEST['dir_search'] ) ) ? sanitize_text_field( $_REQUEST['dir_search'] ) : '';
+		$county_selected  = ( ! empty( $_REQUEST['county'] ) ) ? sanitize_text_field( $_REQUEST['county'] ) : '';
 
 		$args = array(
 			'post_type'      => self::$post_type,
@@ -135,10 +133,6 @@ class Directory_Sawmill extends Directory_Base {
 			'orderby'        => 'title',
 			'order'          => 'ASC',
 		);
-
-		if ( ! empty( $dir_search ) ) {
-			$args['s'] = $dir_search;
-		}
 
 		if ( ! empty( $county_selected ) ) {
 

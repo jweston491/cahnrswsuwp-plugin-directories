@@ -26,6 +26,7 @@ class Service {
 		'vegetation-control-mechanical'   => 'Vegetation control/release – mechanical',
 		'wildlife-enhancement'            => 'Wildlife enhancement',
 		'wildlife-damage'                 => 'Wildlife damage control',
+		'fuels-reduction'                 => 'Fuels reduction',
 	);
 
 	public static function get_terms() {

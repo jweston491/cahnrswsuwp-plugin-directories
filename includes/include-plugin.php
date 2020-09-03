@@ -2,7 +2,7 @@
 
 class Plugin {
 
-	protected static $version = '0.0.6';
+	protected static $version = '1.0.0';
 
 	public function __construct() {
 
