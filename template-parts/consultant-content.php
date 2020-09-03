@@ -60,7 +60,7 @@
 	<div class="cahnrswsuwp-c-dir__profile-consultant__county__wrapper">
 		<h2 class="cahnrswsuwp-c-dir__profile-consultant__section-title">Counties Served</h2>
 		<ul class="cahnrswsuwp-c-dir__profile-consultant__county__details">
-			<?php foreach ( $counties as $county ) : if ( strlen( $county ) > 0 ) : ?>
+				<?php foreach ( $counties as $county ) : if ( strlen( $county ) > 0 ) : ?>
 				<li class="cahnrswsuwp-c-dir__profile-consultant__county">
 						<?php echo esc_html( $county ); ?>
 				</li>

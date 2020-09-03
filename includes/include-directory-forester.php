@@ -96,6 +96,7 @@ class Directory_Forester extends Directory_Base {
 
 			$query = new \WP_Query( $args );
 
+
 			// The Loop
 			if ( $query->have_posts() ) {
 
@@ -122,6 +123,8 @@ class Directory_Forester extends Directory_Base {
 		$county_selected  = ( ! empty( $_REQUEST['county'] ) ) ? sanitize_text_field( $_REQUEST['county'] ) : '';
 		$type_selected    = ( ! empty( $_REQUEST['service_type'] ) ) ? sanitize_text_field( $_REQUEST['service_type'] ) : '';
 
+		$dir_search  = ( ! empty( $_REQUEST['dir_search'] ) ) ? sanitize_text_field( $_REQUEST['dir_search'] ) : '';
+
 		$args = array(
 			'post_type'      => self::$post_type,
 			'posts_per_page' => '-1',
@@ -129,6 +132,10 @@ class Directory_Forester extends Directory_Base {
 			'orderby'        => 'title',
 			'order'          => 'ASC',
 		);
+
+		if ( ! empty( $dir_search ) ) {
+			$args['s'] = $dir_search;
+		}
 
 		if ( ! empty( $service_selected ) || ! empty( $county_selected ) ) {
 

@@ -51,9 +51,11 @@
 		<h2 class="cahnrswsuwp-c-dir__profile-sawmill__section-title">Counties Served</h2>
 		<ul class="cahnrswsuwp-c-dir__profile-sawmill__county__details">
 			<?php foreach ( $counties as $county ) : ?>
-			<li class="cahnrswsuwp-c-dir__profile-sawmill__county">
-				<?php echo esc_html( $county ); ?>
-			</li>
+				<?php if ( strlen( $county ) > 0 ) : ?>
+					<li class="cahnrswsuwp-c-dir__profile-sawmill__county">
+						<?php echo esc_html( $county ); ?>
+					</li>
+				<?php endif; ?>
 			<?php endforeach; ?>
 		</ul>
 	</div>
