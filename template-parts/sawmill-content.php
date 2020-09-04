@@ -9,14 +9,14 @@
 				<?php echo esc_html( $sawmill->get_option( '_city' ) ); ?>, <?php echo esc_html( $sawmill->get_option( '_state' ) ); ?>, <?php echo esc_html( $sawmill->get_option( '_zip' ) ); ?>
 			</li><?php endif; ?>
 			<?php if ( ! empty( $sawmill->get_option( '_phone' ) ) ) : ?><li class="cahnrswsuwp-c-dir__profile-sawmill__contact__phone">
-			<span class="cahnrswsuwp-c-dir__profile_label">Phone</span> <a href="tel:<?php echo esc_attr( $sawmill->get_option( '_phone' ) ); ?>"><?php echo esc_html( $sawmill->get_option( '_phone' ) ); ?></a>
+			<span class="cahnrswsuwp-c-dir__profile_label">Phone</span>: <?php echo esc_html( $sawmill->get_option( '_phone' ) ); ?>
 			</li><?php endif; ?>
 			<?php if ( ! empty( $sawmill->get_option( '_fax' ) ) ) : ?><li class="cahnrswsuwp-c-dir__profile-sawmill__contact__fax">
 			<span class="cahnrswsuwp-c-dir__profile_label">Fax:</span> <?php echo esc_html( $sawmill->get_option( '_fax' ) ); ?>
 			</li><?php endif; ?>
 			<?php if ( ! empty( $sawmill->get_option( '_email' ) ) ) : ?>
 			<li class="cahnrswsuwp-c-dir__profile-sawmill__contact__email">
-			<span class="cahnrswsuwp-c-dir__profile_label">Email:</span> <a href="mailto:<?php echo esc_attr( $sawmill->get_option( '_email' ) ); ?>"><?php echo esc_html( $sawmill->get_option( '_email' ) ); ?></a>
+			<span class="cahnrswsuwp-c-dir__profile_label">Email:</span> <?php echo esc_html( $sawmill->get_option( '_email' ) ); ?>
 			</li><?php endif; ?>
 			<?php if ( ! empty( $sawmill->get_option( '_website' ) ) ) : ?><li class="cahnrswsuwp-c-dir__profile-sawmill__contact__website">
 			<a href="<?php echo esc_url( $sawmill->get_option( '_website' ) ); ?>"><?php echo esc_html( $sawmill->get_option( '_website' ) ); ?></a>
